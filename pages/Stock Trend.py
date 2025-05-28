@@ -10,6 +10,7 @@ from datetime import datetime
 import warnings
 warnings.filterwarnings('ignore')
 
+
 # --- Page Configuration ---
 st.set_page_config(
     page_title="TradingLite - Advanced Stock Analysis", 
@@ -784,3 +785,19 @@ st.markdown("---")
 st.markdown("#### 🔄 Application Info")
 st.info("📈 TradingLite - Advanced Stock Analysis Platform")
 st.markdown("Built with Streamlit, Plotly, and yfinance for comprehensive market analysis.")
+
+st.divider()
+st.markdown("#### 👨‍💻 Developed by")
+image_url1 = "./images/name1.png"
+name1 = "Teshin Bubpha"
+
+image_url2 = "./images/name1.png"
+name2 = "Pitchayaphum Rukjring"
+
+col1, col2, col3, col4, col5 = st.columns(5)
+with col1:
+    st.image(image_url1,width=80)
+    st.write(name1)
+with col2:
+    st.image(image_url2,width=80)
+    st.write(name2)
