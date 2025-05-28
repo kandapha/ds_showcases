@@ -30,7 +30,7 @@ for i, img_name in enumerate(st.session_state["images"]):
         if st.button("เลือก 👇", key=img_name ):  # empty button over image
             clicked_image = img_name
         img = Image.open(os.path.join(IMAGE_FOLDER, 'CardBacks.jpg'))
-        st.image(img, use_column_width=True)
+        st.image(img, use_container_width=True)
 
 
 #df = pd.read_csv('horo.csv')
