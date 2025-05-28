@@ -17,7 +17,7 @@ with col1:
     st.markdown("#### Weather")
     st.markdown(
     """
-    <a href="/predict_weather">
+    <a href="/Weather_Forecast">
         <img src="https://assets.thehansindia.com/h-upload/2019/12/01/241086-weather-forecast-andhra-pra.webp" width="200">
     </a>
     """,
@@ -29,7 +29,7 @@ with col2:
     st.markdown("#### Stock Price")
     st.markdown(
     """
-    <a href="/horoscope">
+    <a href="/Stock_Trend">
         <img src="https://daxg39y63pxwu.cloudfront.net/images/blog/stock-price-prediction-using-machine-learning-project/Stock_Price_Prediction.webp" width="200">
     </a>
     """,
@@ -41,7 +41,7 @@ with col3:
     st.markdown("#### Your Next GPA")
     st.markdown(
     """
-    <a href="/predict_your_next_GPA">
+    <a href="/Predict_Your_GPA">
         <img src="https://www.shutterstock.com/image-photo/wooden-block-letters-gpa-word-260nw-2503751947.jpg" width="180">
     </a>
     """,
