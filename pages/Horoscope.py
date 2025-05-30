@@ -38,10 +38,18 @@ file_path = "horo.txt"
 df = pd.read_csv(file_path, sep='\t', header=None, names=["Name", "Description", "Filename"])
 
 st.divider()
-st.markdown("#### คำทำนายดวงคุณวันนี้")
+#st.markdown("#### คำทำนายดวงคุณวันนี้")
+st.markdown('<div id="my-target"><h2>🎯 คำทำนายดวงคุณวันนี้!</h2></div>', unsafe_allow_html=True)
 
 if clicked_image:
     #clicked_image = 'Cups09.jpg'
+
+    st.markdown("""
+        <script>
+            document.getElementById("my-target").scrollIntoView({behavior: "smooth"});
+        </script>
+    """, unsafe_allow_html=True)
+
     st.image(Image.open(os.path.join(IMAGE_FOLDER, clicked_image)) , width=150)
     st.info(f"You clicked on: **{clicked_image}**") 
     st.info(f"คำทำนาย: วันนี้ {df[df['Filename']==clicked_image]['Description'].values[0]}")    

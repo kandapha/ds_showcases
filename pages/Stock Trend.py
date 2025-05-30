@@ -791,7 +791,7 @@ st.markdown("#### 👨‍💻 Developed by")
 image_url1 = "./images/name1.png"
 name1 = "Teshin Bubpha"
 
-image_url2 = "./images/name1.png"
+image_url2 = "./images/phum.png"
 name2 = "Pitchayaphum Rukjring"
 
 col1, col2, col3, col4, col5 = st.columns(5)
