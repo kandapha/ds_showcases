@@ -3,6 +3,7 @@ import os
 import random
 from PIL import Image
 import pandas as pd
+from time import sleep
 
 # ตั้งค่าชื่อโฟลเดอร์ภาพ
 IMAGE_FOLDER = "Cards-jpg"  # ให้สร้างโฟลเดอร์ชื่อ Cards-jpg และใส่ภาพไว้ที่นั่น
@@ -12,7 +13,7 @@ all_images = [img for img in os.listdir(IMAGE_FOLDER) if img.lower().endswith(('
 st.title("🔮 ดูดวงด้วยตัวเอง ด้วย Data Science")
 
 # สุ่มภาพ 16 ภาพ
-if st.button("🔀 Randomize"):
+if st.button("🔀 กดเพื่อสลับไพ่ และอย่าลืมหลับตา ตั้งจิตอธิฐาน 🙈"):
     random_images = random.sample(all_images, min(20, len(all_images)))
     st.session_state["images"] = random_images
 else:
@@ -29,9 +30,11 @@ for i, img_name in enumerate(st.session_state["images"]):
     with col:
         if st.button("เลือก 👇", key=img_name ):  # empty button over image
             clicked_image = img_name
+           
         img = Image.open(os.path.join(IMAGE_FOLDER, 'CardBacks.jpg'))
         st.image(img, use_container_width=True)
-
+        #sleep(0.2) 
+        
 
 #df = pd.read_csv('horo.csv')
 file_path = "horo.txt"
@@ -40,6 +43,7 @@ df = pd.read_csv(file_path, sep='\t', header=None, names=["Name", "Description",
 st.divider()
 #st.markdown("#### คำทำนายดวงคุณวันนี้")
 st.markdown('<div id="my-target"><h2>🎯 คำทำนายดวงคุณวันนี้!</h2></div>', unsafe_allow_html=True)
+
 
 if clicked_image:
     #clicked_image = 'Cups09.jpg'
@@ -54,4 +58,4 @@ if clicked_image:
     st.info(f"You clicked on: **{clicked_image}**") 
     st.info(f"คำทำนาย: วันนี้ {df[df['Filename']==clicked_image]['Description'].values[0]}")    
 
-    
+    st.toast("คุณเลือกไพ่แล้ว! เลื่อนไปด้านล่างเพื่ออ่านผลการทำนาย", icon="🎴")

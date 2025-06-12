@@ -12,7 +12,7 @@ st.divider()
 # ตัวอย่าง Application
 st.markdown("#### 🤖 ตัวอย่าง AI Application")
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 with col1:
     st.markdown("#### Weather")
     st.markdown(
@@ -38,11 +38,22 @@ with col2:
 
 
 with col3:
-    st.markdown("#### Your Next GPA")
+    st.markdown("#### Predict GPA")
     st.markdown(
     """
     <a href="/Predict_Your_GPA">
         <img src="https://www.shutterstock.com/image-photo/wooden-block-letters-gpa-word-260nw-2503751947.jpg" width="180">
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
+
+with col4:
+    st.markdown("#### Horoscope")
+    st.markdown(
+    """
+    <a href="/Horoscope">
+        <img src="https://static.naewna.com/uploads/news/source/863916.jpg" width="200">
     </a>
     """,
     unsafe_allow_html=True
