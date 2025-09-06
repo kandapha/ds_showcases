@@ -59,6 +59,11 @@ with col4:
     unsafe_allow_html=True
     )
 
+# VDO หลักสูตร
+st.divider()
+video_file = open("ds_vdo.mp4", "rb")
+video_bytes = video_file.read()
+st.video(video_bytes, autoplay=True)
 
 # จุดเด่นของหลักสูตร
 st.divider()
